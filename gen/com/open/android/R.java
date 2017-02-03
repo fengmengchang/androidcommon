@@ -16,12 +16,12 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int ttf_name=0x7f010000;
+        public static int ttf_name=0x7f010000;
     }
     public static final class color {
-        public static final int tab_indicator_text_selected=0x7f060000;
-        public static final int tab_indicator_text_unselected=0x7f060001;
-        public static final int white_50=0x7f060002;
+        public static int tab_indicator_text_selected=0x7f040000;
+        public static int tab_indicator_text_unselected=0x7f040001;
+        public static int white_50=0x7f040002;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -31,42 +31,42 @@ containing a value of this type.
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f070000;
-        public static final int activity_vertical_margin=0x7f070001;
-        public static final int nav_tab_text_size=0x7f070003;
-        public static final int tab_highlight_height=0x7f070002;
-        public static final int text_size_50=0x7f070004;
+        public static int activity_horizontal_margin=0x7f050000;
+        public static int activity_vertical_margin=0x7f050001;
+        public static int nav_tab_text_size=0x7f050003;
+        public static int tab_highlight_height=0x7f050002;
+        public static int text_size_50=0x7f050004;
     }
     public static final class drawable {
-        public static final int common_v4=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int radio_btn_check_false=0x7f020002;
-        public static final int radio_btn_check_true=0x7f020003;
-        public static final int tab_app_new=0x7f020004;
-        public static final int tab_app_new_h=0x7f020005;
-        public static final int tab_title_background=0x7f020006;
+        public static int common_v4=0x7f020000;
+        public static int ic_launcher=0x7f020001;
+        public static int radio_btn_check_false=0x7f020002;
+        public static int radio_btn_check_true=0x7f020003;
+        public static int tab_app_new=0x7f020004;
+        public static int tab_app_new_h=0x7f020005;
+        public static int tab_title_background=0x7f020006;
     }
     public static final class id {
-        public static final int imageview=0x7f080001;
+        public static int imageview=0x7f060001;
         /**  标题栏id 
          */
-        public static final int title_bar=0x7f080000;
-        public static final int tv_tab_indicator=0x7f080002;
+        public static int title_bar=0x7f060000;
+        public static int tv_tab_indicator=0x7f060002;
     }
     public static final class layout {
-        public static final int fragment_common_v4=0x7f030000;
-        public static final int tab_view_indicator_item=0x7f030001;
-        public static final int tabhost_title_head=0x7f030002;
+        public static int fragment_common_v4=0x7f030000;
+        public static int tab_view_indicator_item=0x7f030001;
+        public static int tabhost_title_head=0x7f030002;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
-        public static final int fzlt_cu_hei=0x7f040005;
-        public static final int fzlt_zhun_hei=0x7f040004;
-        public static final int nav_tab_focus_ttf=0x7f040007;
-        public static final int nav_tab_normal_ttf=0x7f040006;
-        public static final int save_picture=0x7f040001;
-        public static final int save_picture_failed=0x7f040002;
-        public static final int save_picture_success=0x7f040003;
+        public static int app_name=0x7f070000;
+        public static int fzlt_cu_hei=0x7f070005;
+        public static int fzlt_zhun_hei=0x7f070004;
+        public static int nav_tab_focus_ttf=0x7f070007;
+        public static int nav_tab_normal_ttf=0x7f070006;
+        public static int save_picture=0x7f070001;
+        public static int save_picture_failed=0x7f070002;
+        public static int save_picture_success=0x7f070003;
     }
     public static final class style {
         /** 
@@ -89,66 +89,11 @@ containing a value of this type.
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static int AppBaseTheme=0x7f080000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static int AppTheme=0x7f080001;
     }
     public static final class styleable {
         /** Attributes that can be used with a TextViewWithTTF.
@@ -177,6 +122,6 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.open.android:ttf_name
         */
-        public static final int TextViewWithTTF_ttf_name = 0;
+        public static int TextViewWithTTF_ttf_name = 0;
     };
 }

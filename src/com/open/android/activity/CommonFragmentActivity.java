@@ -28,7 +28,10 @@ import android.view.View;
  */
 public class CommonFragmentActivity<T> extends BaseFragmentActivity<T> {
 	public static final String TAG = CommonFragmentActivity.class.getSimpleName();
-
+	public String url;
+	public String title;
+	public int pageNo;
+	public int position;
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -85,6 +88,13 @@ public class CommonFragmentActivity<T> extends BaseFragmentActivity<T> {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		super.onClick(v);
+	}
+	
+	/**
+	 * 绑定fragment
+	 */
+	public void addfragment(){
+		
 	}
 
 }
