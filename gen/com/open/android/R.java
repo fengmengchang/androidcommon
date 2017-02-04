@@ -59,14 +59,13 @@ containing a value of this type.
         public static int tabhost_title_head=0x7f030002;
     }
     public static final class string {
-        public static int app_name=0x7f070000;
-        public static int fzlt_cu_hei=0x7f070005;
-        public static int fzlt_zhun_hei=0x7f070004;
-        public static int nav_tab_focus_ttf=0x7f070007;
-        public static int nav_tab_normal_ttf=0x7f070006;
-        public static int save_picture=0x7f070001;
-        public static int save_picture_failed=0x7f070002;
-        public static int save_picture_success=0x7f070003;
+        public static int fzlt_cu_hei=0x7f070004;
+        public static int fzlt_zhun_hei=0x7f070003;
+        public static int nav_tab_focus_ttf=0x7f070006;
+        public static int nav_tab_normal_ttf=0x7f070005;
+        public static int save_picture=0x7f070000;
+        public static int save_picture_failed=0x7f070001;
+        public static int save_picture_success=0x7f070002;
     }
     public static final class style {
         /** 

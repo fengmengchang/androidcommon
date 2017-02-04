@@ -20,14 +20,13 @@ int id tv_tab_indicator 0x7f060002
 int layout fragment_common_v4 0x7f030000
 int layout tab_view_indicator_item 0x7f030001
 int layout tabhost_title_head 0x7f030002
-int string app_name 0x7f070000
-int string fzlt_cu_hei 0x7f070005
-int string fzlt_zhun_hei 0x7f070004
-int string nav_tab_focus_ttf 0x7f070007
-int string nav_tab_normal_ttf 0x7f070006
-int string save_picture 0x7f070001
-int string save_picture_failed 0x7f070002
-int string save_picture_success 0x7f070003
+int string fzlt_cu_hei 0x7f070004
+int string fzlt_zhun_hei 0x7f070003
+int string nav_tab_focus_ttf 0x7f070006
+int string nav_tab_normal_ttf 0x7f070005
+int string save_picture 0x7f070000
+int string save_picture_failed 0x7f070001
+int string save_picture_success 0x7f070002
 int style AppBaseTheme 0x7f080000
 int style AppTheme 0x7f080001
 int[] styleable TextViewWithTTF { 0x7f010000 }
