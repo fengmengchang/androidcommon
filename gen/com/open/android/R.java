@@ -8,6 +8,19 @@
 package com.open.android;
 
 public final class R {
+    public static final class array {
+        public static int CREATE_TABLE_FIELD=0x7f040003;
+        public static int CREATE_TABLE_KEY=0x7f040004;
+        public static int CREATE_TABLE_NAME=0x7f040002;
+        public static int CREATE_TABLE_SQL=0x7f040001;
+        /**  db数据库操作start 
+         */
+        public static int DATABASE_INFO=0x7f040000;
+        public static int QUERY_ALL_TABLE_SQL=0x7f040006;
+        public static int QUERY_ALL_TABLE_SQL_WHERE=0x7f040007;
+        public static int QUERY_ALL_TABLE_SQL_WHERE_TYPE=0x7f040008;
+        public static int UPDATE_TABLE_SQL=0x7f040005;
+    }
     public static final class attr {
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
@@ -19,9 +32,9 @@ containing a value of this type.
         public static int ttf_name=0x7f010000;
     }
     public static final class color {
-        public static int tab_indicator_text_selected=0x7f040000;
-        public static int tab_indicator_text_unselected=0x7f040001;
-        public static int white_50=0x7f040002;
+        public static int tab_indicator_text_selected=0x7f050000;
+        public static int tab_indicator_text_unselected=0x7f050001;
+        public static int white_50=0x7f050002;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -31,11 +44,11 @@ containing a value of this type.
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static int activity_horizontal_margin=0x7f050000;
-        public static int activity_vertical_margin=0x7f050001;
-        public static int nav_tab_text_size=0x7f050003;
-        public static int tab_highlight_height=0x7f050002;
-        public static int text_size_50=0x7f050004;
+        public static int activity_horizontal_margin=0x7f060000;
+        public static int activity_vertical_margin=0x7f060001;
+        public static int nav_tab_text_size=0x7f060003;
+        public static int tab_highlight_height=0x7f060002;
+        public static int text_size_50=0x7f060004;
     }
     public static final class drawable {
         public static int common_v4=0x7f020000;
@@ -47,11 +60,11 @@ containing a value of this type.
         public static int tab_title_background=0x7f020006;
     }
     public static final class id {
-        public static int imageview=0x7f060001;
+        public static int imageview=0x7f070001;
         /**  标题栏id 
          */
-        public static int title_bar=0x7f060000;
-        public static int tv_tab_indicator=0x7f060002;
+        public static int title_bar=0x7f070000;
+        public static int tv_tab_indicator=0x7f070002;
     }
     public static final class layout {
         public static int fragment_common_v4=0x7f030000;
@@ -59,13 +72,13 @@ containing a value of this type.
         public static int tabhost_title_head=0x7f030002;
     }
     public static final class string {
-        public static int fzlt_cu_hei=0x7f070004;
-        public static int fzlt_zhun_hei=0x7f070003;
-        public static int nav_tab_focus_ttf=0x7f070006;
-        public static int nav_tab_normal_ttf=0x7f070005;
-        public static int save_picture=0x7f070000;
-        public static int save_picture_failed=0x7f070001;
-        public static int save_picture_success=0x7f070002;
+        public static int fzlt_cu_hei=0x7f080004;
+        public static int fzlt_zhun_hei=0x7f080003;
+        public static int nav_tab_focus_ttf=0x7f080006;
+        public static int nav_tab_normal_ttf=0x7f080005;
+        public static int save_picture=0x7f080000;
+        public static int save_picture_failed=0x7f080001;
+        public static int save_picture_success=0x7f080002;
     }
     public static final class style {
         /** 
@@ -89,10 +102,10 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static int AppBaseTheme=0x7f080000;
+        public static int AppBaseTheme=0x7f090000;
         /**  Application theme. 
          */
-        public static int AppTheme=0x7f080001;
+        public static int AppTheme=0x7f090001;
     }
     public static final class styleable {
         /** Attributes that can be used with a TextViewWithTTF.
