@@ -295,6 +295,9 @@ public class BaseV4Fragment<T,F extends BaseV4Fragment> extends Fragment impleme
 	
 	/** 在适配器里 调用onitemclick事件*/
 	public static final int MESSAGE_ADAPTER_CALL_ONITEM = 9000;
+	
+	/** dropmenu下来菜单选中事件*/
+	public static final int MESSAGE_DROP_MENU_ITEM_SELECTED = 10000;
 	/*
 	 * (non-Javadoc)
 	 * 
