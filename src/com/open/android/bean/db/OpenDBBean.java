@@ -33,6 +33,8 @@ public class OpenDBBean extends CommonBean{
 	private String typename;
 	private String url;
 	private String downloadurl;
+	private boolean selectstate;
+	private boolean editable;
 	
 	public int getId() {
 		return id;
@@ -81,6 +83,18 @@ public class OpenDBBean extends CommonBean{
 	}
 	public void setDownloadurl(String downloadurl) {
 		this.downloadurl = downloadurl;
+	}
+	public boolean isSelectstate() {
+		return selectstate;
+	}
+	public void setSelectstate(boolean selectstate) {
+		this.selectstate = selectstate;
+	}
+	public boolean isEditable() {
+		return editable;
+	}
+	public void setEditable(boolean editable) {
+		this.editable = editable;
 	}
 	
 }
