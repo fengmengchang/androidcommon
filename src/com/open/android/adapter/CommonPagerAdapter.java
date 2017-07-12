@@ -56,7 +56,10 @@ public class CommonPagerAdapter<T> extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         return null;
     }
-	 
+    public int getItemPosition(Object object){   
+        return POSITION_NONE;
+ }
+
 
 	protected ImageLoadingListener getImageLoadingListener() {
 		return animateFirstListener;

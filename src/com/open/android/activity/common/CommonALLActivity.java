@@ -43,9 +43,9 @@ import com.open.android.bean.CommonAllBean;
  *****************************************************************************************************************************************************************************
  */
 public class CommonALLActivity extends CommonFragmentActivity implements OnItemClickListener {
-	private ListView listview;
-	private CommonAllClassAdapter mAllClassAdapter;
-	private List<CommonAllBean> list = new ArrayList<CommonAllBean>();
+	public ListView listview;
+	public CommonAllClassAdapter mAllClassAdapter;
+	public List<CommonAllBean> list = new ArrayList<CommonAllBean>();
 
 	/*
 	 * (non-Javadoc)

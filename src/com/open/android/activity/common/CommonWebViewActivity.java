@@ -89,6 +89,9 @@ public class CommonWebViewActivity extends CommonFragmentActivity {
             	int type = result.getType();
             	switch (type) {
 				case WebView.HitTestResult.IMAGE_TYPE:
+				case WebView.HitTestResult.IMAGE_ANCHOR_TYPE:
+				case WebView.HitTestResult.SRC_ANCHOR_TYPE:
+				case WebView.HitTestResult.SRC_IMAGE_ANCHOR_TYPE:
 					final String imgurl = result.getExtra();
 					AlertDialog.Builder builder = new AlertDialog.Builder(CommonWebViewActivity.this);  
 		               builder.setItems(new String[]{CommonWebViewActivity.this.getResources().getString(R.string.save_picture)}, new DialogInterface.OnClickListener() {  
