@@ -147,7 +147,8 @@ public class OpenDBService {
 		OpenDBHelper.getInstance(mContext).insert(mContext.getResources().getStringArray(R.array.CREATE_TABLE_NAME)[0],
 				mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD), 
 				ojects);
-		Toast.makeText(mContext, "收藏成功", Toast.LENGTH_SHORT).show();
+//		Toast.makeText(mContext, "收藏成功", Toast.LENGTH_SHORT).show();
+		Log.d("收藏成功", "======");
 		Log.i(TAG, "insert=="+openbean.getTime()+openbean.getUrl()+openbean.getType()+openbean.getDownloadurl());
 	}
 	
@@ -158,7 +159,7 @@ public class OpenDBService {
 				new String[]{title},
 				new String[]{mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[5],mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[4]},
 				new String[]{url,typename});
-		Toast.makeText(mContext, "更新收藏成功", Toast.LENGTH_SHORT).show();
+//		Toast.makeText(mContext, "更新收藏成功", Toast.LENGTH_SHORT).show();
 		Log.i(TAG, "update =url="+url+";typename=="+typename+";title==");
 	}
 	
@@ -166,7 +167,7 @@ public class OpenDBService {
 		OpenDBHelper.getInstance(mContext).delete(mContext.getResources().getStringArray(R.array.CREATE_TABLE_NAME)[0], 
 				new String[]{mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[5]},
 				new String[]{openbean.getUrl()});
-		Toast.makeText(mContext, "取消收藏成功", Toast.LENGTH_SHORT).show();
+//		Toast.makeText(mContext, "取消收藏成功", Toast.LENGTH_SHORT).show();
 		Log.i(TAG, "delete=="+openbean.getUrl());
 	}
 	
@@ -174,7 +175,7 @@ public class OpenDBService {
 		OpenDBHelper.getInstance(mContext).delete(mContext.getResources().getStringArray(R.array.CREATE_TABLE_NAME)[0], 
 				new String[]{mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[5],mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[4]},
 				new String[]{url,typename});
-		Toast.makeText(mContext, "取消收藏成功", Toast.LENGTH_SHORT).show();
+//		Toast.makeText(mContext, "取消收藏成功", Toast.LENGTH_SHORT).show();
 		Log.i(TAG, "delete=url="+url+";typename=="+typename);
 	}
 
