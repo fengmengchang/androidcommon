@@ -34,7 +34,7 @@
     </array>
     
     <array name="UPDATE_TABLE_SQL">
-        <item></item>
+        <item>update collection set title = ? where url=? and typename=?</item>
     </array>
     
      <array name="QUERY_ALL_TABLE_SQL">

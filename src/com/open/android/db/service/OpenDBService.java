@@ -139,7 +139,8 @@ public class OpenDBService {
 				new String[]{openbean.getUrl(),openbean.getTypename()});
 		if(map!=null && !map.isEmpty()){
 //			Toast.makeText(mContext, "已经下载过", Toast.LENGTH_SHORT).show();
-			Log.d("insert", "已经下载过");
+			Log.d("更新", "======");
+			updateByUrlTypeName(mContext,openbean.getUrl(),openbean.getTypename(),openbean.getTitle());
 			return;
 		}
 		
@@ -151,12 +152,30 @@ public class OpenDBService {
 	}
 	
 	
+	public static void updateByUrlTypeName(Context mContext,String url ,String typename,String title){
+		OpenDBHelper.getInstance(mContext).update(mContext.getResources().getStringArray(R.array.CREATE_TABLE_NAME)[0], 
+				new String[]{mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[2]},
+				new String[]{title},
+				new String[]{mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[5],mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[4]},
+				new String[]{url,typename});
+		Toast.makeText(mContext, "更新收藏成功", Toast.LENGTH_SHORT).show();
+		Log.i(TAG, "update =url="+url+";typename=="+typename+";title==");
+	}
+	
 	public static void delete(Context mContext,OpenDBBean openbean){
 		OpenDBHelper.getInstance(mContext).delete(mContext.getResources().getStringArray(R.array.CREATE_TABLE_NAME)[0], 
 				new String[]{mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[5]},
 				new String[]{openbean.getUrl()});
 		Toast.makeText(mContext, "取消收藏成功", Toast.LENGTH_SHORT).show();
 		Log.i(TAG, "delete=="+openbean.getUrl());
+	}
+	
+	public static void deleteByUrlTypeName(Context mContext,String url ,String typename){
+		OpenDBHelper.getInstance(mContext).delete(mContext.getResources().getStringArray(R.array.CREATE_TABLE_NAME)[0], 
+				new String[]{mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[5],mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[4]},
+				new String[]{url,typename});
+		Toast.makeText(mContext, "取消收藏成功", Toast.LENGTH_SHORT).show();
+		Log.i(TAG, "delete=url="+url+";typename=="+typename);
 	}
 
 	public static void insertBatch(Context mContext,List<OpenDBBean> list){
