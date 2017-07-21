@@ -48,5 +48,9 @@
        <array name="QUERY_ALL_TABLE_SQL_WHERE_TYPE">
         <item>select * from collection where type=?</item>
     </array>
+    
+       <array name="QUERY_ALL_TABLE_SQL_WHERE_URL_TYPENAME">
+        <item>select * from collection where url=? and typename=?</item>
+    </array>
       <!-- db数据库操作end -->
 </resources>

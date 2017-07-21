@@ -96,6 +96,34 @@ public class OpenDBService {
 		return list;
 	}
 	
+	public static List<OpenDBBean> queryListType(Context mContext,String url,String typename){
+		List<OpenDBBean> list = new ArrayList<OpenDBBean>();
+		try {
+			List<Map> maps	= OpenDBHelper.getInstance(mContext).queryListMap(
+					mContext.getResources().getStringArray(R.array.QUERY_ALL_TABLE_SQL_WHERE_URL_TYPENAME)[0],
+					new String[]{url,typename});
+			OpenDBBean openbean;
+			//[{typename=类型：亚洲, title=片名：最新pacopacomama 010317_235 新年女体盛~巫女多次疯狂被中出~[大咲萌], time=时间：2017-01-05 02:59:17, type=3, id=1, url=http://m.100av.us/vshow.php?id=11174, imgsrc=http://mi3.1100lu.xyz/m/vod/2017-01-05/586d4604b21a2.jpg}]
+			for(int i=0;i<maps.size();i++){
+				openbean = new OpenDBBean();
+				openbean.setId((Integer)maps.get(i).get(mContext.getResources().getStringArray(R.array.CREATE_TABLE_KEY)[0]));
+				openbean.setType((Integer)maps.get(i).get(mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[0]));
+				openbean.setImgsrc((String)maps.get(i).get(mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[1]));
+				openbean.setTitle((String)maps.get(i).get(mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[2]));
+				openbean.setTime((String)maps.get(i).get(mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[3]));
+				openbean.setTypename((String)maps.get(i).get(mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[4]));
+				openbean.setUrl((String)maps.get(i).get(mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[5]));
+				openbean.setDownloadurl((String)maps.get(i).get(mContext.getResources().getStringArray(R.array.CREATE_TABLE_FIELD)[6]));
+				list.add(openbean);
+				
+				Log.i(TAG, "queryList url =="+url+" ;typename=="+typename+";i==" +i+maps.get(i).toString());
+		    }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
 	public static void insert(Context mContext,OpenDBBean openbean){
 		openbean.setTime(DateFormat.format("yyyy年MM月dd日 kk:mm",new Date())+"");
 		Object[] ojects = new Object[7];
@@ -107,10 +135,11 @@ public class OpenDBService {
 		ojects[5] = openbean.getUrl();
 		ojects[6] = openbean.getDownloadurl();
 		
-		Map map = OpenDBHelper.getInstance(mContext).queryItemMap(mContext.getResources().getStringArray(R.array.QUERY_ALL_TABLE_SQL_WHERE)[0], 
-				new String[]{openbean.getUrl()});
+		Map map = OpenDBHelper.getInstance(mContext).queryItemMap(mContext.getResources().getStringArray(R.array.QUERY_ALL_TABLE_SQL_WHERE_URL_TYPENAME)[0], 
+				new String[]{openbean.getUrl(),openbean.getTypename()});
 		if(map!=null && !map.isEmpty()){
-			Toast.makeText(mContext, "已经下载过", Toast.LENGTH_SHORT).show();
+//			Toast.makeText(mContext, "已经下载过", Toast.LENGTH_SHORT).show();
+			Log.d("insert", "已经下载过");
 			return;
 		}
 		

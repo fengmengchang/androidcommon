@@ -35,6 +35,7 @@ public final class R {
         public static int QUERY_ALL_TABLE_SQL=0x7f0c0006;
         public static int QUERY_ALL_TABLE_SQL_WHERE=0x7f0c0007;
         public static int QUERY_ALL_TABLE_SQL_WHERE_TYPE=0x7f0c0008;
+        public static int QUERY_ALL_TABLE_SQL_WHERE_URL_TYPENAME=0x7f0c0009;
         public static int UPDATE_TABLE_SQL=0x7f0c0005;
     }
     public static final class attr {

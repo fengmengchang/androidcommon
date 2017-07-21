@@ -20,6 +20,7 @@ int array DATABASE_INFO 0x7f0c0000
 int array QUERY_ALL_TABLE_SQL 0x7f0c0006
 int array QUERY_ALL_TABLE_SQL_WHERE 0x7f0c0007
 int array QUERY_ALL_TABLE_SQL_WHERE_TYPE 0x7f0c0008
+int array QUERY_ALL_TABLE_SQL_WHERE_URL_TYPENAME 0x7f0c0009
 int array UPDATE_TABLE_SQL 0x7f0c0005
 int attr actionBarDivider 0x7f01002b
 int attr actionBarItemBackground 0x7f01002c
