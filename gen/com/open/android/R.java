@@ -2626,8 +2626,6 @@ containing a value of this type.
         public static int Base_V21_Theme_AppCompat_Light_Dialog=0x7f080130;
         public static int Base_V22_Theme_AppCompat=0x7f080131;
         public static int Base_V22_Theme_AppCompat_Light=0x7f080132;
-        public static int Base_V23_Theme_AppCompat=0x7f080133;
-        public static int Base_V23_Theme_AppCompat_Light=0x7f080134;
         /**  Base platform-dependent theme providing an action bar in a dark-themed activity. 
          */
         public static int Base_V7_Theme_AppCompat=0x7f08010d;
