@@ -7,12 +7,12 @@ import java.util.Map;
 
 import org.json.JSONObject;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -48,7 +48,10 @@ public class BaseAppFragment<T,F extends BaseAppFragment> extends Fragment imple
 	public WeakAppReferenceHandler weakReferenceHandler;
 	private ImageLoadingListener animateFirstListener = new AnimateFirstDisplayListener();
 	public View view;
-
+	public String url;
+	public boolean isVisibleToUser;
+	public int pageNo = 1;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -90,7 +93,7 @@ public class BaseAppFragment<T,F extends BaseAppFragment> extends Fragment imple
 	@Override
 	public void setUserVisibleHint(boolean isVisibleToUser) {
 		// TODO Auto-generated method stub
-		super.setUserVisibleHint(isVisibleToUser);
+//		super.setUserVisibleHint(isVisibleToUser);
 		initUI(isVisibleToUser);
 	}
  
