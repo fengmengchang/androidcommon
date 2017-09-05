@@ -37,7 +37,7 @@ import com.open.android.mvp.view.CommonView;
  * @description:
  *****************************************************************************************************************************************************************************
  */
-public class CommonAsyncTaskPresenter2<T,P extends CommonPresenter,V extends CommonView<T, P>> implements CallEarliest<T>, Callback<T>, Callable<T>, ProgressCallable<T>, Response.Listener<JSONObject>, Response.ErrorListener {
+public class CommonAsyncTaskPresenter2<T,P extends CommonPresenter,V extends CommonView<T, P>> implements CallEarliest<T>, Callback<T>, Callable<T>, ProgressCallable<T>, Response.Listener<JSONObject>, Response.ErrorListener , CommonPresenter{
 	public String url;
 	public int pageNo = 1;
 	public Context mContext;
@@ -158,6 +158,33 @@ public class CommonAsyncTaskPresenter2<T,P extends CommonPresenter,V extends Com
 	public void onCallEarliest() throws Exception {
 		// TODO Auto-generated method stub
 		
+	}
+
+	/* (non-Javadoc)
+	 * @see com.open.android.mvp.base.BasePresenter#start()
+	 */
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see com.open.android.mvp.presenter.CommonPresenter#doAsync()
+	 */
+	@Override
+	public void doAsync() {
+		// TODO Auto-generated method stub
+		doAsync(this, this, this);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.open.android.mvp.presenter.CommonPresenter#setPageNo(int)
+	 */
+	@Override
+	public void setPageNo(int pageNo) {
+		// TODO Auto-generated method stub
+		this.pageNo = pageNo;
 	}
 
 }
