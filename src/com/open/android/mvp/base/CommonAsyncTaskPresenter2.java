@@ -148,7 +148,7 @@ public class CommonAsyncTaskPresenter2<T,P extends CommonPresenter,V extends Com
 	@Override
 	public void onCallback(T result) {
 		// TODO Auto-generated method stub
-		
+		mViewModel.onCallback(result);
 	}
 
 	/* (non-Javadoc)
