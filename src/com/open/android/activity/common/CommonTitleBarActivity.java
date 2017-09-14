@@ -96,10 +96,18 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 	protected void bindEvent() {
 		// TODO Auto-generated method stub
 		super.bindEvent();
-		id_iv_right.setOnClickListener(this);
-		id_iv_left.setOnClickListener(this);
-		txt_left.setOnClickListener(this);
-		txt_right.setOnClickListener(this);
+		if(id_iv_right!=null){
+			id_iv_right.setOnClickListener(this);
+		}
+		if(id_iv_left!=null){
+			id_iv_left.setOnClickListener(this);
+		}
+		if(txt_left!=null){
+			txt_left.setOnClickListener(this);
+		}
+		if(txt_right!=null){
+			txt_right.setOnClickListener(this);
+		}
 	}
 
 	/*

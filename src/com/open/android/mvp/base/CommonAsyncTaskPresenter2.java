@@ -42,6 +42,15 @@ public class CommonAsyncTaskPresenter2<T,P extends CommonPresenter,V extends Com
 	public int pageNo = 1;
 	public Context mContext;
 	public V mViewModel;
+	
+	/**反射类名*/
+	public String className;
+	/**反射方法名*/
+	public String methodName;
+	/**反射参数名*/
+	public Class[] parameterTypes;
+	/**反射参数值*/
+	public Object[] args;
 	/**
 	 * 封装的asynctask方法，此方法没有进度框.
 	 * 
@@ -185,6 +194,30 @@ public class CommonAsyncTaskPresenter2<T,P extends CommonPresenter,V extends Com
 	public void setPageNo(int pageNo) {
 		// TODO Auto-generated method stub
 		this.pageNo = pageNo;
+	}
+
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+
+	public String getMethodName() {
+		return methodName;
+	}
+
+	public void setMethodName(String methodName) {
+		this.methodName = methodName;
+	}
+
+	public Object[] getArgs() {
+		return args;
+	}
+
+	public void setArgs(Object[] args) {
+		this.args = args;
 	}
 
 }
