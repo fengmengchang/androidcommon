@@ -25,6 +25,17 @@ import java.io.Serializable;
  ***************************************************************************************************************************************************************************** 
  */
 public class CommonBean implements Serializable{
+	private int resId;
+
+	public int getResId() {
+		return resId;
+	}
+
+	public void setResId(int resId) {
+		this.resId = resId;
+	}
+	
+	
 
  
 }

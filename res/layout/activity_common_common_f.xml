@@ -5,7 +5,7 @@
     android:clipChildren="false"
     android:clipToPadding="false"
     android:fitsSystemWindows="true"
-    android:background="#000"
+    android:background="#ffffff"
     >
 
     <FrameLayout

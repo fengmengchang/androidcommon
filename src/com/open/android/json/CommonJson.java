@@ -12,6 +12,9 @@
 package com.open.android.json;
 
 import java.io.Serializable;
+import java.util.List;
+
+import com.open.android.bean.CommonBean;
 
 /**
  ***************************************************************************************************************************************************************************** 
@@ -25,5 +28,16 @@ import java.io.Serializable;
  ***************************************************************************************************************************************************************************** 
  */
 public class CommonJson implements Serializable {
+	private List<CommonBean> dotlist;
+
+	public List<CommonBean> getDotlist() {
+		return dotlist;
+	}
+
+	public void setDotlist(List<CommonBean> dotlist) {
+		this.dotlist = dotlist;
+	}
+	
+	
 
 }

@@ -11,16 +11,18 @@
  */
 package com.open.android.activity.common;
 
-import com.open.android.R;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.open.android.R;
 
 
 /**
@@ -40,7 +42,8 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 	public TextView txt_right;// 右文字
 	public ImageView id_iv_left;// 左图片
 	public ImageView id_iv_right;// 右图片
-
+	public LinearLayout layout_root;
+	public RelativeLayout layout_titlebar;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -64,6 +67,8 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 
 		id_iv_left = (ImageView) findViewById(R.id.id_iv_left);
 		id_iv_right = (ImageView) findViewById(R.id.id_iv_right);
+		layout_root = (LinearLayout) findViewById(R.id.layout_root);
+		layout_titlebar = (RelativeLayout) findViewById(R.id.layout_titlebar);
 	}
 
 	/*
@@ -195,6 +200,16 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 	public void setRightImageResId(int resid) {
 		id_iv_right.setVisibility(View.VISIBLE);
 		id_iv_right.setImageResource(resid);
+	}
+	
+	public void setStatusBarColor(int colorId){
+		if(layout_root!=null){
+			layout_root.setBackgroundColor(colorId);
+		}
+
+		if(layout_titlebar!=null){
+			layout_titlebar.setBackgroundColor(colorId);
+		}
 	}
 
 	public static void startCommonTitleBarActivity(Context context, String url) {
