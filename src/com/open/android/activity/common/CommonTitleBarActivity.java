@@ -44,6 +44,9 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 	public ImageView id_iv_right;// 右图片
 	public LinearLayout layout_root;
 	public RelativeLayout layout_titlebar;
+	public TextView txt_time;//中间底部刷新时间
+	public ImageView id_iv_right2;//右侧图片2
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -69,6 +72,9 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 		id_iv_right = (ImageView) findViewById(R.id.id_iv_right);
 		layout_root = (LinearLayout) findViewById(R.id.layout_root);
 		layout_titlebar = (RelativeLayout) findViewById(R.id.layout_titlebar);
+		
+		txt_time = (TextView) findViewById(R.id.txt_time);
+		id_iv_right2 = (ImageView) findViewById(R.id.id_iv_right2);
 	}
 
 	/*
@@ -112,6 +118,10 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 		}
 		if(txt_right!=null){
 			txt_right.setOnClickListener(this);
+		}
+		 
+		if(id_iv_right2!=null){
+			id_iv_right2.setOnClickListener(this);
 		}
 	}
 
@@ -176,9 +186,31 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 		}
 	}
 
+	/**
+	 * 中间 标题
+	 */
 	public void setCenterTextValue(String textvalue) {
 		if (txt_title != null) {
 			txt_title.setText(textvalue);
+		}
+	}
+	
+	/**
+	 * 中间右侧图标
+	 */
+	public void setCenterCompoundDrawables(int resId){
+		if (txt_title != null) {
+			txt_title.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(resId),null);
+		}
+	}
+	
+	/**
+	 * 中间底部刷新时间
+	 */
+	public void setCenterTimeTextValue(String textvalue) {
+		if (txt_time != null) {
+			txt_time.setText(textvalue);
+			txt_time.setVisibility(View.VISIBLE);
 		}
 	}
 
@@ -197,9 +229,20 @@ public class CommonTitleBarActivity extends CommonCommonFragmentActivity impleme
 		id_iv_left.setImageResource(resid);
 	}
 
+	/**
+	 * 右侧图标 默认刷新功能
+	 */
 	public void setRightImageResId(int resid) {
 		id_iv_right.setVisibility(View.VISIBLE);
 		id_iv_right.setImageResource(resid);
+	}
+	
+	/**
+	 * 右侧图标2 默认搜索按钮
+	 */
+	public void setRightImage2ResId(int resid) {
+		id_iv_right2.setVisibility(View.VISIBLE);
+		id_iv_right2.setImageResource(resid);
 	}
 	
 	public void setStatusBarColor(int colorId){
