@@ -58,7 +58,15 @@ public class CommonAdapter<T> extends BaseAdapter {
 		return position;
 	}
  
+	public void removeItem(int position) {
+		list.remove(position);
+		notifyDataSetChanged();
+	}
 
+	public void insertItem(T t, int position) {
+		list.add(position, t);
+		notifyDataSetChanged();
+	}
 	/*
 	 * (non-Javadoc)
 	 * 
