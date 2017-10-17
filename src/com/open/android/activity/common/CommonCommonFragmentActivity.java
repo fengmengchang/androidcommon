@@ -15,6 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.widget.RelativeLayout;
 
 import com.open.android.R;
 import com.open.android.activity.CommonFragmentActivity;
@@ -32,6 +33,7 @@ import com.open.android.fragment.CommonV4Fragment;
  *****************************************************************************************************************************************************************************
  */
 public class CommonCommonFragmentActivity extends CommonFragmentActivity {
+	public RelativeLayout layout_common;
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -44,6 +46,16 @@ public class CommonCommonFragmentActivity extends CommonFragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_common_common_f);
 		init();
+	}
+	
+	/* (non-Javadoc)
+	 * @see com.open.android.activity.CommonFragmentActivity#findView()
+	 */
+	@Override
+	protected void findView() {
+		// TODO Auto-generated method stub
+		super.findView();
+		layout_common = (RelativeLayout) findViewById(R.id.layout_common);
 	}
 
 	/*
@@ -61,6 +73,12 @@ public class CommonCommonFragmentActivity extends CommonFragmentActivity {
 			url = "";
 		}
 		addfragment();
+	}
+	
+	public void setStatusBarColor(int colorId){
+		if(layout_common!=null){
+			layout_common.setBackgroundColor(colorId);
+		}
 	}
 
 	/*
